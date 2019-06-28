@@ -1,0 +1,2033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<title>KVC</title>
+
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<link href="./css/font-awesome.min.css" rel="stylesheet">
+<link href="./css/animate.min.css" rel="stylesheet">
+<link href="./css/owl.carousel.css" rel="stylesheet">
+<link href="./css/owl.transitions.css" rel="stylesheet">
+<link href="./css/prettyPhoto.css" rel="stylesheet">
+<link href="./css/main.css" rel="stylesheet">
+<link href="./css/styles.css" rel="stylesheet">
+<link href="./css/custom.css" rel="stylesheet">
+<link href="./css/contact_main.css" rel="stylesheet">
+<link href="./css/util.css" rel="stylesheet">
+
+
+<link rel="shortcut icon" href="images/ico/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="./images/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="./images/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="./images/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed"
+	href="./images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+
+<body id="home" class="homepage">
+
+	<header id="header">
+		<nav id="main-menu" class="navbar navbar-default navbar-fixed-top"
+			role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/"><img src="images/logo.jpg" alt="logo" width="100px" height="60px" ></a>
+				</div>
+
+				<div class="collapse navbar-collapse navbar-right">
+					<ul class="nav navbar-nav">
+						<li class="scroll active"><a href="#home">Home</a></li>
+						<li class="scroll"><a href="#features">Course</a></li>
+						<li class="scroll"><a href="#services">Programme</a></li>
+						<li class="scroll"><a href="#portfolio">Plan</a></li>
+						<li class="scroll"><a href="#about">Vision</a></li>
+						<li class="scroll"><a href="#meet-team">Team</a></li>
+						<li class="scroll"><a href="/users/register" style="color:black;margin-right:5px;height:10px;" class="btn btn-primary">Register</a></li>
+                        <li class="scroll"><a href="/users/login" style="color:black;margin-right:5px;height:10px;" class="btn btn-primary">Login</a></li>
+						
+					</ul>
+				</div>
+			</div>
+			<!--/.container-->
+		</nav>
+		<!--/nav-->
+	</header>
+	
+	<section id="main-slider">
+		<div class="owl-carousel">
+			<div class="item" style="background-image: url(./images/slider/bg1.jpg);">
+				<div class="slider-inner">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="carousel-content">
+									<h2>Deliver High Performance</h2>
+									<h3 style="color: white;">
+										<p>Log-in to browse test series ,mock tests and many more</p></h3>
+									
+							
+										<a href="/users/login" style="width:100px;height:50px;margin-left:15%;align-content:center;" class="btn btn-primary"><h3>Login</h3></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/.item-->
+			<div class="item" style="background-image: url(./images/slider/bg2.jpg);">
+				<div class="slider-inner">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="carousel-content">
+									<h2>Deliver High Performance</h2>
+									<h3 style="color: white;">
+										<p>Log-in to browse test series ,mock tests and many more</p></h3>
+									
+								
+										<a href="/users/login" style="width:100px;height:50px;margin-left:15%;align-content:center;"  class="btn btn-primary"><h3>Login</h3></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/.item-->
+		</div>
+		<!--/.owl-carousel-->
+	</section>
+	<!--/#main-slider-->
+
+
+	<!-- pop up login page -->
+
+	<style>
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email] {
+	width: 20%;
+	padding: 12px 20px;
+	margin: 8px 26px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+/* Set a style for all buttons */
+.login-signup {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 26px;
+	border: none;
+	cursor: pointer;
+	width: 20%;
+	font-size: 20px;
+}
+
+.login-signup:hover {
+	opacity: 0.8;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+	position: relative;
+}
+
+.avatar {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 5000;
+	left: 0;
+	top: 100px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content Box */
+.modal-content {
+	background-color: #fefefe;
+	margin: 4% auto 15% auto;
+	border: 1px solid #888;
+	width: 22%;
+	padding-bottom: 30px;
+}
+@media only screen and (max-width: 768px){
+.modal-content{
+width:80%;}
+}
+@media only screen and (max-width: 768px){
+input[type=text], input[type=password], input[type=email] {
+	width: 80%;}
+}
+@media only screen and (max-width: 768px){
+.login-signup{
+width:80%;}
+}
+
+
+
+/* The Close Button (x) */
+.close {
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: red;
+	cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+	animation: zoom 0.6s
+}
+
+@keyframes zoom {
+	from {transform: scale(0)
+}
+
+to {
+	transform: scale(1)
+}
+}
+</style>
+
+	<div id="modal-wrapper" class="modal">
+
+		<form class="modal-content animate" action="/log_in" method="POST">
+
+			<div class="imgcontainer">
+				<span
+					onclick="document.getElementById('modal-wrapper').style.display='none'"
+					class="close" title="Close">&times;</span>
+				
+				<h1 style="text-align: center">Log-In</h1>
+			</div>
+
+			<div class="container">
+				<input type="email" placeholder="Enter email" name="email" required></br>
+				 <input type="password"	placeholder="Enter Password" name="psw" required> </br>
+				<button class="login-signup" type="submit">Login</button>
+				</br> <a href="#" style="color: black; padding-left: 30px"
+					onclick="document.getElementById('modal-wrapper-signup').style.display='block'">Sign-Up</a></br>
+				<input type="checkbox" style="margin: 26px 30px;"> Remember
+				me
+
+			</div>
+
+		</form>
+
+	</div>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('modal-wrapper');
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+
+
+	<div id="modal-wrapper-signup" class="modal">
+
+		<form class="modal-content animate" action='/sign_up' method="POST">
+
+			<div class="imgcontainer">
+				<span
+					onclick="document.getElementById('modal-wrapper-signup').style.display='none'" 
+					class="close" title="Close">&times;</span>
+				<!--  <img src="1.png" alt="Avatar" class="avatar"> -->
+				<h1 style="text-align: center">Sign-Up</h1>
+			</div>
+
+			<div class="container">
+			     <input type="text" placeholder="Enter user-name"
+					name="name" required></br>
+				 <input type="email" placeholder="Enter Email"
+					name="email" required></br> <input type="password"
+					placeholder="Enter Password" name="psw" required> </br>
+					<input type="text" placeholder="Enter Address" name="addr" required></br>
+				<button class="login-signup" type="submit">Sign-Up</button>
+				</br>
+
+
+			</div>
+
+		</form>
+
+	</div>
+
+	<script>
+		// If user clicks anywhere outside of the modal, Modal will close
+
+		var modal = document.getElementById('modal-wrapper-signup');
+		window.onclick = function(event) {
+			if (event.targe == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+
+
+
+	<section id="features">
+
+		<style>
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+	position: relative;
+}
+
+/* The Modal (background) */
+.modal-cbse10 {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 100px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content Box */
+.modal-content-cbse10 {
+	background-color: #fefefe;
+	margin: 4% auto 15% auto;
+	border: 1px solid #888;
+	width: 30%;
+	height: 65%;
+	padding-bottom: 80px;
+}
+
+@media only screen and (max-width: 768px){
+.modal-content-cbse10{
+width:90%;
+height:90%;}
+}
+@media only screen and (max-width: 1000px){
+.modal-content-cbse10{
+width:90%;
+height:70%;}
+}
+
+
+
+/* The Close Button (x) */
+.close {
+	position: absolute;
+	right: 25px;
+	top: -20px;
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: red;
+	cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+	animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+	from {transform: scale(0);
+}
+
+to {
+	transform: scale(1);
+}
+}
+</style>
+
+		<div id="modal-wrapper-cbse10" class="modal-cbse10">
+
+			<form class="modal-content-cbse10 animate" action="/action_page.php">
+
+				<div class="imgcontainer">
+					<span
+						onclick="document.getElementById('modal-wrapper-cbse10').style.display='none'"
+						class="close" title="Close">&times;</span>
+					
+						<h4 style="text-align: center">Physics</h4>
+						<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\images\work-process\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\web\images\work-process\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\images\work-process\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div>
+					</div>
+					</br>
+					
+
+					<h4 style="text-align: center">Chemistry</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;"> 
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+
+					<h4 style="text-align: center">Mathematics</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+
+					<h4 style="text-align: center">Biology</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+				</div>
+			</form>
+		</div>
+
+		<div id="modal-wrapper-cbse11" class="modal-cbse10">
+
+			<form class="modal-content-cbse10 animate" action="/action_page.php">
+
+				<div class="imgcontainer">
+					<span
+						onclick="document.getElementById('modal-wrapper-cbse11').style.display='none'"
+						class="close" title="Close">&times;</span>
+					
+						<h4 style="text-align: center">
+							Physics
+							</h4>
+					
+                    <div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+
+					<h4 style="text-align: center">Chemistry</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+				
+
+					<h4 style="text-align: center">Mathematics</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+
+					<h4 style="text-align: center">Biology</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+				</div>
+			</form>
+		</div>
+
+		<div id="modal-wrapper-cbse12" class="modal-cbse10">
+
+			<form class="modal-content-cbse10 animate" action="/action_page.php">
+
+				<div class="imgcontainer">
+					<span
+						onclick="document.getElementById('modal-wrapper-cbse12').style.display='none'"
+						class="close" title="Close">&times;</span>
+					
+						<h4 style="text-align: center">
+							Physics
+							</h1>
+					
+                      <div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+
+					<h4 style="text-align: center">Chemistry</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+
+					<h4 style="text-align: center">Mathematics</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+				
+
+					<h4 style="text-align: center">Biology</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+				</div>
+
+			</form>
+		</div>
+
+		<div id="modal-wrapper-icse10" class="modal-cbse10">
+
+			<form class="modal-content-cbse10 animate" action="/action_page.php">
+
+				<div class="imgcontainer">
+					<span
+						onclick="document.getElementById('modal-wrapper-icse10').style.display='none'"
+						class="close" title="Close">&times;</span>
+					
+						<h4 style="text-align: center">
+							Physics
+							</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+
+					<h4 style="text-align: center">Chemistry</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+
+					<h4 style="text-align: center">Mathematics</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+
+					<h4 style="text-align: center">Biology</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+				</div>
+
+			</form>
+		</div>
+
+		<div id="modal-wrapper-icse11" class="modal-cbse10">
+
+			<form class="modal-content-cbse10 animate" action="/action_page.php">
+
+				<div class="imgcontainer">
+					<span
+						onclick="document.getElementById('modal-wrapper-icse11').style.display='none'"
+						class="close" title="Close">&times;</span>
+					
+						<h4 style="text-align: center">
+							Physics
+							</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+
+					<h4 style="text-align: center">Chemistry</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+
+					<h4 style="text-align: center">Mathematics</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+
+					<h4 style="text-align: center">Biology</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+				</div>
+
+			</form>
+		</div>
+
+		<div id="modal-wrapper-icse12" class="modal-cbse10">
+
+			<form class="modal-content-cbse10 animate" action="/action_page.php">
+
+				<div class="imgcontainer">
+					<span
+						onclick="document.getElementById('modal-wrapper-icse12').style.display='none'"
+						class="close" title="Close">&times;</span>
+					
+						<h4 style="text-align: center">
+							Physics
+							</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+
+					<h4 style="text-align: center">Chemistry</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+
+					<h4 style="text-align: center">Mathematics</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+
+					<h4 style="text-align: center">Biology</h4>
+					<div class="papers" style="display:flex;justify-content:space-around;">
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+							style="padding: 5px 32px 6px 32px;">SAMPLE PAPERS</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-1</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-2</a></br> <a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Sample
+								Paper-3</a></br>
+
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-success dropdown-toggle"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PREVIOUS YEARS PAPER</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2018</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2017</a></br>
+							<a class="dropdown-item" text-align=center
+								href=".\\images\\work-process\\a.pdf">Year-2016</a></br>
+
+						</div>
+					</div></div>
+					</br>
+					
+				</div>
+
+			</form>
+		</div>
+
+		<div class="container" style="padding-left:55px;">
+
+			<div class="section-header">
+				<h2 class="section-title text-center wow fadeInDown">COURSES</h2>
+				</br>
+				<p class="text-center wow fadeInDown"></p>
+				<h4 align=center>At our educational portal , get updates and
+					preparation material for CBSE and ICSE.</h4>
+				</p>
+			</div>
+			<!-- <div class="row"> -->
+
+
+			<div class="col-sm-6">
+				<div class="media service-box wow fadeInRight">
+					<button type="button" class="btn btn-light"
+							onclick="document.getElementById('modal-wrapper-cbse10').style.display='block'"
+							style="color: black;">
+					<div class="pull-left">
+						<i class="fa fa-download"></i>
+					</div>
+					<div class="media-body">
+						
+							<h4 class="media-heading">CBSE - Class 10</h4>
+							<p>sample papers and previous year questions of class 10 cbse</p>
+					</div>
+					</button>
+				</div>
+
+				<div class="media service-box wow fadeInRight">
+					<button type="button" class="btn btn-light"
+							onclick="document.getElementById('modal-wrapper-cbse11').style.display='block'"
+							style="color: black;">
+					<div class="pull-left">
+						 <i class="fa fa-download"></i> 
+					</div>
+					<div class="media-body">
+						
+							<h4 class="media-heading">CBSE - Class 11</h4>
+							<p>sample papers and previous year questions of class 11 cbse</p>
+					</div>
+					</button>
+				</div>
+
+				<div class="media service-box wow fadeInRight">
+					<button type="button" class="btn btn-light"
+							onclick="document.getElementById('modal-wrapper-cbse12').style.display='block'"
+							style="color: black;">
+							<div class="pull-left">
+						 <i class="fa fa-download"></i> 
+					</div>
+					<div class="media-body">
+						
+							<h4 class="media-heading">CBSE - Class 12</h4>
+							<p>sample papers and previous year questions of class 12 cbse</p>
+					</div>
+					</button>
+				</div>
+
+			</div>
+
+
+			<div class="col-sm-6">
+				<div class="media service-box wow fadeInRight">
+					<button type="button" class="btn btn-light"
+							onclick="document.getElementById('modal-wrapper-icse10').style.display='block'"
+							style="color: black;">
+							<div class="pull-left">
+						 <i class="fa fa-download"></i> 
+					</div>
+					<div class="media-body">
+						
+							<h4 class="media-heading">ICSE - Class 10</h4>
+							<p>sample papers and previous year questions of class 10 icse</p>
+					</div>
+					</button>
+				</div>
+
+				<div class="media service-box wow fadeInRight">
+					<button type="button" class="btn btn-light"
+							onclick="document.getElementById('modal-wrapper-icse11').style.display='block'"
+							style="color: black;">
+							<div class="pull-left">
+					<i class="fa fa-download"></i>
+					</div>
+					<div class="media-body">
+						
+							<h4 class="media-heading">ICSE - Class 11</h4>
+							<p>sample papers and previous year questions of class 11 icse</p>
+					</div>
+					</button>
+				</div>
+
+				<div class="media service-box wow fadeInRight">
+					<button type="button" class="btn btn-light"
+							onclick="document.getElementById('modal-wrapper-icse12').style.display='block'"
+							style="color: black;">
+							<div class="pull-left">
+						<i class="fa fa-download"></i> 
+					</div>
+					<div class="media-body">
+						
+							<h4 class="media-heading">ICSE - Class 12</h4>
+							<p>sample papers and previous year questions of class 12 icse</p>
+					</div>
+					</button>
+				</div>
+
+
+			</div>
+		</div>
+		</div>
+	</section>
+
+
+
+
+
+	<section id="cta2">
+		<div class="container">
+			<div class="text-center">
+				<h2 class="wow fadeInUp" data-wow-duration="300ms"
+					data-wow-delay="0ms">MOCK TEST</h2>
+				<p class="wow fadeInUp" data-wow-duration="300ms"
+					data-wow-delay="100ms">free online mock tests for 10th and 12th
+					CBSE and ICSE. Take these tests to check your strengths and
+					weakness .</p>
+				<p class="wow fadeInUp" data-wow-duration="300ms"
+					data-wow-delay="200ms">
+					<a class="btn btn-primaryy btn-lg" href="#" style="color:white;">Click Here - Mock
+						Test</a>
+				</p>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section id="services">
+
+
+		<div class="containertable">
+
+			<div class="section-header">
+				<h2 class="section-title text-center wow fadeInDown">PROGRAMMES</h2>
+				<b><p class="text-center wow fadeInDown">CLASSROOM PROGRAMMES</BR>(VII to XII-PCMB)</br>ICSE/CBSE/STATE BOARD</p>	</b>				
+					</div>
+					
+					<h4 align=center>Engineering</h4>
+					
+					      <table class="table table-striped table-dark" style="border:2px solid #e6e6e6;">
+  <thead>
+    <tr style="background-color:#e6e6e6;color:black;">
+    
+      <th scope="col">Cource Name</th>
+      <th scope="col">Cource Detail</th>
+      <th scope="col">Eligibility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td>Nascent</br>(2 year classroom)</br></br></td>
+      <td>Success in plus-two board</br>JEE mains &advance/KVPY/olympiad</td>
+      <td>for class X to XI students</td>
+    </tr>
+    <tr>
+      
+      <td>Achiever</br>(1 year classroom)</br></br></td>
+      <td>Success in plus-two </br>Board/JEE-mains &advance</td>
+      <td>For XI to XII students</td>
+    </tr>
+    <tr>
+      
+      <td>Target/Lakshya</br></br></td>
+      <td>Success in JEE Mains </br>&Advance</td>
+      <td>For Class XII appearing/</br>pass students</td>
+    </tr>
+    <tr>
+      
+      <td>Target JEE-Mains</br>(1 year CLassroom)</br></br></td>
+      <td>Success in JEE Mains</td>
+      <td>For Class XII appearing/</br>pass students</td>
+    </tr>
+  </tbody>
+</table>
+<h4 align=center>Pre Foundation</h4>
+					
+					      <table class="table table-striped table-dark" style="border:2px solid #e6e6e6;">
+  <thead>
+    <tr style="background-color:#e6e6e6;color:black;">
+    
+      <th scope="col">Cource Name</th>
+      <th scope="col">Cource Detail</th>
+      <th scope="col">Eligibility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td>Ankur Beginner</br>(1 year classroom)</td>
+      <td>Success in school examination</br>/NTSE/Pre-Foundation for</br> JEE/AIPMT/AIIMS</td>
+      <td>for class VII</td>
+    </tr>
+    <tr>
+      
+      <td>Ankur Junior</br>(1 year classroom)</td>
+      <td>Success in school examination</br>/NTSE/Pre-Foundation for</br> JEE/AIPMT/AIIMS</td>
+      <td>For VIII</td>
+    </tr>
+    <tr>
+      
+      <td>Ankur Senior</br>(1 year classroom)</td>
+      <td>Success in school examination</br>/NTSE/Olympiad/Pre-Foundation </br>for JEE/AIPMT/AIIMS</td>
+      <td>For Class IX</td>
+    </tr>
+    <tr>
+      
+      <td>Ankur Leader</br>(1 year classroom)</td>
+      <td>Success in school examination</br>/NTSE/Olympiad/Pre-Foundation</br> for JEE/AIPMT/AIIMS</td>
+      <td>For Class X</td>
+    </tr>
+  </tbody>
+</table>			 
+<h4 align=center>Medical</h4>
+					
+					      <table class="table table-striped table-dark" style="border:2px solid #e6e6e6;">
+  <thead>
+    <tr style="background-color:#e6e6e6;color:black;">
+    
+      <th scope="col">Cource Name</th>
+      <th scope="col">Cource Detail</th>
+      <th scope="col">Eligibility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td>Nascent Medico</br>(2 year classroom)</td>
+      <td>Success in plus-two board</br>/AIPMT & AIIMS/KVPY</td>
+      <td>for class X to XI students</td>
+    </tr>
+    <tr>
+      
+      <td>Target/Lakshya Medico</br>(1 year classroom)</td>
+      <td>Success in AIPMT </br>& AIIMS </br>&Advance</td>
+      <td>For Class XII appearing/</br>pass students</td>
+    </tr>
+    <tr>
+      
+      <td>Achiever Medico</br>(1 year CLassroom)</td>
+      <td>Success in Plus-Two</br>Boards/AIPMT & AIIMS</td>
+      <td>For Class XI & XII appearing/</br> students</td>
+    </tr>
+  </tbody>
+</table>
+
+	                        
+			
+	
+		</div>
+		<!--/.container-->
+	</section>
+	
+
+	<section id="portfolio">
+		<div class="container">
+			<div class="section-header">
+				<h2 class="section-title text-center wow fadeInDown">KVC Plans</h2>
+				<p class="text-center wow fadeInDown">
+					Below table has CBSE/ICSE previous year question and sample papers for last 10 year in pdf format along with solution. Buy now to get the pdf.
+				</p>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-5 col-md-2" style="border:1.5px solid #e6e6e6;">
+					<div class="wow zoomIn" data-wow-duration="400ms"
+						data-wow-delay="0ms">
+						<ul class="pricing">
+							<div class="plan-name">
+								<h4>CBSE Class 10</h4>
+							</div>
+
+							<li style="margin-left:5px;"><strong>10</strong> Sample Papers</li>
+							<li style="margin-left:5px;"><strong>Previous 10</strong> year papers</li>
+							<div class="price-duration">
+								<li style="margin-left:5px;"><span class="price"> <img src="./images/rupee.png" width=10px height=10px /> 500
+								</span></li>
+							</div>
+							<div class="plan-purchase"><a class="btn btn-primary"
+								href="#">Buy Now</button></a></div>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-5 col-md-2" style="border:2px solid #e6e6e6;">
+					<div class="wow zoomIn" data-wow-duration="400ms"
+						data-wow-delay="200ms">
+						<ul class="pricing">
+							<div class="plan-name">
+								<h4>CBSE Class 11</h4>
+							</div>
+
+							<li style="margin-left:5px;"><strong>10</strong> Sample Papers</li>
+							<li style="margin-left:4px;"><strong>Previous 10</strong> year papers</li>
+							<div class="price-duration">
+								<li style="margin-left:5px;"><span class="price"> <img src="./images/rupee.png" width=10px height=10px /> 500
+								</span></li>
+							</div>
+							<div class="plan-purchase" style='align-content:center;'><a class="btn btn-primary"
+								href="#">Buy Now</a></div>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-5 col-md-2" style="border:1.5px solid #e6e6e6;">
+					<div class="wow zoomIn" data-wow-duration="400ms"
+						data-wow-delay="400ms">
+						<ul class="pricing">
+							<div class="plan-name">
+								<h4>CBSE Class 12</h4>
+							</div>
+
+							<li style="margin-left:5px;"><strong>10</strong> Sample Papers</li>
+							<li style="margin-left:5px;"><strong>Previous 10</strong> year papers</li>
+							<div class="price-duration">
+								<li style="margin-left:5px;"><span class="price"> <img src="./images/rupee.png" width=10px height=10px /> 500
+								</span></li>
+							</div>
+							<div class="plan-purchase"><a class="btn btn-primary"
+								href="#">Buy Now</a></div>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-5 col-md-2" style="border:1.5px solid #e6e6e6;">
+					<div class="wow zoomIn" data-wow-duration="400ms"
+						data-wow-delay="600ms">
+						<ul class="pricing">
+							<div class="plan-name">
+								<h4>ICSE Class 10</h4>
+							</div>
+
+							<li style="margin-left:5px;"><strong>10</strong> Sample Papers</li>
+							<li style="margin-left:5px;"><strong>Previous 10</strong> year papers</li>
+							<div class="price-duration">
+								<li style="margin-left:5px;"><span class="price"> <img src="./images/rupee.png" width=10px height=10px /> 500
+								</span></li>
+							</div>
+							<div class="plan-purchase"><a class="btn btn-primary"
+								href="#">Buy Now</a></div>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-5 col-md-2" style="border:1.5px solid #e6e6e6;">
+					<div class="wow zoomIn" data-wow-duration="400ms"
+						data-wow-delay="600ms">
+						<ul class="pricing">
+							<div class="plan-name">
+								<h4>ICSE Class 11</h4>
+							</div>
+
+							<li style="margin-left:5px;"><strong>10</strong> Sample Papers</li>
+							<li style="margin-left:5px;"><strong>Previous 10</strong> year papers</li>
+							<div class="price-duration">
+								<li style="margin-left:5px;"><span class="price"> <img src="./images/rupee.png" width=10px height=10px /> 500
+								</span></li>
+							</div>
+							<div class="plan-purchase"><a class="btn btn-primary"
+								href="#">Buy Now</a></div>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-5 col-md-2" style="border:1.5px solid #e6e6e6;">
+					<div class="wow zoomIn" data-wow-duration="400ms"
+						data-wow-delay="600ms">
+						<ul class="pricing">
+							<div class="plan-name">
+								<h4>ICSE Class 12</h4>
+							</div>
+
+							<li style="margin-left:5px;"><strong>10</strong> Sample Papers</li>
+							<li style="margin-left:5px;"><strong>Previous 10</strong> year papers</li>
+							<div class="price-duration">
+								<li style="margin-left:5px;"><span class="price"> <img src="./images/rupee.png" width=10px height=10px /> 500
+								</span></li>
+							</div>
+							<div class="plan-purchase"><a class="btn btn-primary"
+								href="#">Buy Now</a></div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/#pricing-->
+	<section id="about">
+		<div class="container">
+
+			<div class="section-header">
+				<h2 class="section-title text-center wow fadeInDown">KVC Vision</h2>
+				<h4><p class="text-center wow fadeInDown">
+					Pre Foundation | Medical | Engineering<br>
+				</p></h4>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6 wow fadeInLeft">
+					<h3 class="column-title">A KVC Vision</h3>
+					<!-- 16:9 aspect ratio -->
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe src="https://www.youtube.com/embed/6p0VM-yUpGk"
+							frameborder="0" webkitallowfullscreen mozallowfullscreen
+							allowfullscreen></iframe>
+					</div>
+				</div>
+
+				<div class="col-sm-6 wow fadeInRight">
+					<h3 class="column-title">Why Need To Join KVC & What We Do ?</h3>
+					<p>
+					<ul id="ulArrow">
+					<li><b>Expertise in Numerical(PCM)!</b></li>
+					<li><b>Table Tuition (One-to-One), No Bench Tuition !</b></li>
+					<li><b>100% Practical & Conceptual , No Theoretical !</b></li>
+					<li><b>Series of Tests for Each Topic !</b></li>
+					<li><b>Smart Classes and Advanced Learning  !</b></li>
+					<li><b>Presentation, Seminar , Workshop & Personality Development !</b></li>
+					<li><b>100% guarentee to become in topper's list !</b></li>
+					<li><b>100% guarantee fot IIT-JEE in Super-Six Batch !</b></li>
+					
+					</ul></p>
+
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/#about-->
+
+
+	
+	<section id="meet-team">
+		<div class="container">
+			<div class="section-header">
+				<h2 class="section-title text-center wow fadeInDown">KVC Team</h2>
+				
+			</div>			
+			
+			<div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div class="team-img">
+                            <img class="img-responsive img-circle" src="images/team/ankan.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Ankan Chanda</h3>
+                            <span>Full Stack Developer</span>
+                        </div>
+                        <p>B.Tech(EEE), IEM Kolakta</p>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+                        <div class="team-img">
+                            <img class="img-responsive img-circle" src="images/team/02.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Amitesh Sahoo</h3>
+                            <span>Full Stack Developer</span>
+                        </div>
+                        <p>B.Tech(ECE), IEM Kolakta</p>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+                        <div class="team-img">
+                            <img class="img-responsive img-circle" src="images/team/kaaira.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Kaaira Jaiswal</h3>
+                            <span style="height:400px;"></span>
+                        </div>
+                        <p></br></br></p>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                        <div class="team-img">
+                            <img class="img-responsive img-circle" src="images/team/rooma.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Roma Jaiswal</h3>
+                            <span>Co-Founder</span>
+                        </div>
+                        <p></p>
+                       
+                    </div>
+                </div>
+            </div>
+			
+			
+
+			<div class="divider"></div>
+
+
+			
+			<section id="get-in-touch">
+				<div class="container" style="height:5px;">
+					<div class="section-header" style="margin-top:-79px;">
+						<h2 class="section-title text-center wow fadeInDown">Kaaira Vision Classes</h2>
+						<p class="text-center wow fadeInDown">KVC Vision : Deliver
+							High Performances</p>
+					</div>
+				</div>
+			</section>
+			<!--/#get-in-touch-->
+
+
+			<section id="contact">
+        <!-- <div id="googleMap" style="height:650px;z-index:2;"></div>
+					<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQX-eY5we_h2OA_SZa9dMrodQeQwUjZTM&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"></script> -->
+					
+<div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=SA%2094%20%7C%20Sector%2002%20%7C%20Canal%20Side%20Road%20%7C%20Near%20206%20Bus%20Stand%20%7C%20Salt%20Lake%2C%20%7C%2C%20Kolkata%2C%20700091&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>Google Maps Generator by <a href="https://www.facebook.com/kvisionclasses">Kaaira Techsoft</a></div><style>.mapouter{position:relative;text-align:right;height:300px;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:100%;}</style></div>
+
+</section>
+</br>
+				  
+			</section>
+			<h2 class="section-title text-center wow fadeInDown">CONTACT US</h2></br>
+			<div class="container-contact100">
+				<div class="wrap-contact100">
+					<form class="contact100-form validate-form" id="contactus">
+						<span class="contact100-form-title">
+							Send Message
+						</span>
+		
+						<label class="label-input100" for="email">Enter Subject  <span style="color:red;">*</span></label>
+						<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+							<input type="text" name="subject" id="subject" placeholder="Enter Subject" style="width:90%;">
+							 <span class="focus-input100"></span> 
+						</div>
+		
+						<label class="label-input100" for="email">Enter your email <span style="color:red;">*</span></label>
+						<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+							<input id="email" class="input100" type="email" name="email" placeholder="Eg. example@email.com" style="width:90%;">
+							  <span class="focus-input100"></span>  
+						</div>
+		
+						<label class="label-input100" for="phone">Enter phone number<span style="color:red;">*</span></label>
+						<div class="wrap-input100">
+							<input id="phone" class="input100" type="number" name="phone" placeholder="Eg. +91 8000000000">
+							<span class="focus-input100"></span> 
+						</div>
+		
+						<label class="label-input100" for="message">Message <span style="color:red;">*</span></label>
+						<div class="wrap-input100 validate-input" data-validate = "Message is required">
+							<textarea id="text" class="input100" name="message" placeholder="Write us a message"></textarea>
+							<span class="focus-input100"></span>
+						</div>
+		
+						<div class="container-contact100-form-btn">
+							<input id="contactus" type="submit" value="Send Message" style="background-color: #4CAF50;
+							border: none;
+							color: white;
+							padding: 13px 32px;
+							text-decoration: none;
+							margin: 4px 2px;
+							 cursor: pointer;" onclick=submission()> 
+						</div>
+					</form>
+					 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+									 <script>
+									  
+										function submission(){
+									 $('#contactus').on('submit',(e)=>{
+										 e.preventDefault(e);
+
+										  const email = $('#email').val().trim();
+										  const subject = $('#subject').val().trim();
+										 var text = $('#text').val().trim();
+									
+										 const data = {
+											 email,subject,text
+										 }
+										 console.log(data);
+										 document.getElementById("contactus").reset();
+										
+										 if(data!=null)
+										 $.post('/contact_us',data);
+					
+										 }
+										
+									 
+									 </script>
+		
+					<div class="contact100-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
+						<div class="flex-w size1 p-b-47">
+							<div class="txt1 p-r-25">
+								<span class="lnr lnr-map-marker"></span>
+							</div>
+		
+							<div class="flex-col size2">
+								<span class="txt1 p-b-20">
+									Address
+								</span>
+		
+								<span class="txt2">
+									SA 94 | Sector 02 | Canal Side Road | Near 206 Bus Stand | Salt Lake, |, Kolkata, 700091
+								</span>
+							</div>
+						</div>
+		
+						<div class="dis-flex size1 p-b-47">
+							<div class="txt1 p-r-25">
+								<span class="lnr lnr-phone-handset"></span>
+							</div>
+		
+							<div class="flex-col size2">
+								<span class="txt1 p-b-20">
+									Whatsapp / Call
+								</span>
+		
+								<span class="txt3">
+									+91 7028921776
+								</span>
+							</div>
+						</div>
+		
+						<div class="dis-flex size1 p-b-47">
+							<div class="txt1 p-r-25">
+								<span class="lnr lnr-envelope"></span>
+							</div>
+		
+							<div class="flex-col size2">
+								<span class="txt1 p-b-20">
+									Enquiry
+								</span>
+		
+								<span class="txt3">
+									kvisionclasses@example.com
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>					
+										 <!-- <form id="contactus">
+										 
+										<div>
+											<input type="text" id="subject"  style="width:80%;"
+												placeholder="Subject" required>
+										</div>
+										<div>
+											
+												<input type="email" id="email"  style="width:80%;"
+												placeholder="Email" required>
+										</div>
+										<div>
+											<textarea name="text"  id="text"  rows="8" width="150px"
+												placeholder="Message" required></textarea>
+										</div>
+										<input type="submit" value="submit">
+									</form> --> 
+									<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+									 <script>
+									 
+									 $('#contactus').on('submit',(e)=>{
+										 e.preventDefault(e);
+
+										 const email = $('#email').val().trim();
+										 const subject = $('#subject').val().trim();
+										 var text = $('#text').val().trim();
+
+										 const data = {
+											 email,subject,text
+										 }
+
+										 $.post('/contact_us',data, function(){
+											 console.log('server received our data');
+										 });
+									 });;
+									 
+									 </script>
+									 </div>
+								</div>
+							
+						
+					</div>
+				</div> --> -->
+				
+			</br>
+			 <footer id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">KAAIRA VISION CLASSES</div>
+						<div class="col-sm-6" style="padding-right: 40px;">
+							<ul class="social-icons">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer> 
+			<!--/#footer-->
+			
+
+			<script src="./js/jquery.js"></script>
+			<script src="./js/bootstrap.min.js"></script>
+			<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+			<script src="./js/owl.carousel.min.js"></script>
+			<script src="./js/mousescroll.js"></script>
+			<script src="./js/smoothscroll.js"></script>
+			<script src="./js/jquery.prettyPhoto.js"></script>
+			<script src="./js/jquery.isotope.min.js"></script>
+			<script src="./js/jquery.inview.min.js"></script>
+			<script src="./js/wow.min.js"></script>
+			<script src="./js/main.js"></script>
+</body>
+</html>
